@@ -1,0 +1,21 @@
+<form [formGroup]="academic">
+  <div class="form-row">
+    <div class="form-group col-md-4">
+      <label for="inputEmail4">Collage name</label>
+      <input type="email" formControlName="clg_name" class="form-control"  placeholder="First Name">
+    </div>
+    <div class="form-group col-md-4">
+      <label for="inputPassword4">Degree</label>
+      <input type="type" class="form-control" formControlName="degree"splaceholder="Last Name">
+    </div>
+  </div>
+  
+    
+  <div class="form-group col-md-4">
+    <label for="inputCity">Degree From</label>
+    <input type="text" formControlName="from_year" class="form-control" >
+  </div>
+  
+  
+  <button type="submit" (click)="updateName()" class="btn btn-primary">Submit</button>
+</form>

@@ -17,8 +17,8 @@ export class FirstComponent implements OnInit {
     });
   constructor(private HeroService:HeroService,private router:Router,private httpClientservice:HttpClientService) {}
   updateName(){
-     this.httpClientservice.saveUserDetails(this.bdata.value,'/info?first_name="'+this.bdata.value.first_name+'"&last_name="'
-                                +this.bdata.value.last_name+'"&location="'+this.bdata.value.location+'"&gender="'+this.bdata.value.gender+'"','/info'                
+     this.httpClientservice.saveUserDetails(this.bdata.value,'/info?first_name='+this.bdata.value.first_name+'&last_name='
+                                +this.bdata.value.last_name+'&location='+this.bdata.value.location+'&gender='+this.bdata.value.gender,'/info'                
                                   )
                        
 //  this.router.navigate(['/info'])

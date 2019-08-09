@@ -22,8 +22,8 @@ export class SecondComponent implements OnInit {
   updateName(){
    
       this.httpClientservice.saveUserDetails(this.academic.value,
-        '/biodata?clg_name="'+this.academic.value.clg_name+'"&degree="'+this.academic.value.degree+'"&from_year='
-        +this.academic.value.from_year+'"'
+        '/biodata?clg_name='+this.academic.value.clg_name+'&degree='+this.academic.value.degree+'&from_year='
+        +this.academic.value.from_year
       ,'/')
       this.HeroService.logStatusChange(this.academic.value);
     

@@ -22,11 +22,11 @@ export class MainComponent implements OnInit {
     private router:Router,private httpClientservice:HttpClientService) { 
     //this.HeroService.logStatusChange(this.info.value);
   }
-  data=this.info.value
+  
   updateName(){
     
-    this.httpClientservice.saveUserDetails(this.info.value,'/academic?email="'+ this.info.value.email+
-    '"&contact_no="'+this.data.contact_no+'"+&git_link="'+this.data.git_link+'"+&linkd_link='+this.data.linkd_link
+    this.httpClientservice.saveUserDetails(this.info.value,'/academic?email='+ this.info.value.email+
+    '&contact_no='+this.info.value.contact_no+'+&git_link='+this.info.value.git_link+'+&linkd_link='+this.info.value.linkd_link
     ,'/academic')
     //this.router.navigate(['/academic'])
     this.HeroService.logStatusChange(this.info.value);

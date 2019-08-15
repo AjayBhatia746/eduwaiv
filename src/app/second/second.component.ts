@@ -21,6 +21,7 @@ export class SecondComponent implements OnInit {
   error=""
   updateName(){
     if(this.academic.invalid){
+      
       this.error="Please enter valid information"
         setTimeout(()=>{
           this.error=""

@@ -43,18 +43,28 @@
                       <div class="form-group col-md-6 example-form">
                         <mat-form-field class="example-full-width">
                           <input matInput placeholder="Email" formControlName="email"> 
+                          <mat-error *ngIf="!info.hasError('required')">
+                            Email <strong>required</strong>
+                          </mat-error>
                         </mat-form-field>
                       </div>
                       <div class="form-group col-md-6 example-container">
                         <mat-form-field>
-                          <input formControlName="contact_no" matInput placeholder="Contact No">
+                          <input type="tel" formControlName="contact_no" matInput placeholder="Contact No">
+                          <mat-error *ngIf="!info.hasError('required')">
+                            Contact No. <strong>required</strong>
+                          </mat-error>
                         </mat-form-field>
+                        
                       </div>
                     </div>
                   <div class="form-row">
                     <div class="form-group col-md-12 example-container">
                       <mat-form-field class="example-full-width" >
-                        <input formControlName="git_link" matInput placeholder="GitLink">
+                        <input type="url" formControlName="git_link" matInput placeholder="GitLink">
+                        <mat-error *ngIf="!info.hasError('required')">
+                          GitLink <strong>required</strong>
+                        </mat-error>
                       </mat-form-field>
                     </div>
                      
@@ -63,6 +73,9 @@
                         <div class="form-group col-md-12 example-container">
                           <mat-form-field class="example-full-width" >
                             <input formControlName="linkd_link" matInput placeholder="Linkedin Link">
+                            <mat-error *ngIf="!info.hasError('required')">
+                              Linkedin Link <strong>required</strong>
+                            </mat-error>
                           </mat-form-field>
                         </div>
                         

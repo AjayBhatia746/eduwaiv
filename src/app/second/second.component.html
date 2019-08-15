@@ -43,7 +43,10 @@
                   <div class="form-row">
                       <div class="form-group col-md-12 example-container">
                         <mat-form-field class="example-full-width">
-                          <input matInput placeholder="Collage/University Name" formControlName="clg_name"> 
+                          <input matInput placeholder="Collage/University Name" formControlName="clg_name">
+                          <mat-error *ngIf="!academic.hasError('required')">
+                            Collage/University Name is <strong>required</strong>
+                          </mat-error> 
                         </mat-form-field>
                       </div>
                       
@@ -52,6 +55,9 @@
                     <div class="form-group col-md-12 example-container">
                       <mat-form-field class="example-full-width" >
                         <input formControlName="degree" matInput placeholder="Degree">
+                        <mat-error *ngIf="!academic.hasError('required')">
+                          Degree is <strong>required</strong>
+                        </mat-error>
                       </mat-form-field>
                     </div>
                      
@@ -60,6 +66,9 @@
                         <div class="form-group col-md-12 example-container">
                           <mat-form-field class="example-full-width" >
                             <input formControlName="from_year" matInput placeholder="Degree Duration">
+                            <mat-error *ngIf="!academic.hasError('required')">
+                              Degree duration <strong>required</strong>
+                            </mat-error>
                           </mat-form-field>
                         </div>
                         

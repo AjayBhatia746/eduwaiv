@@ -1,26 +1,27 @@
-<form [formGroup]="bdata" >
+<form [formGroup]="bdata" novalidate>
   <div class="form-row">
     <div class="form-group col-md-4">
       <label for="inputEmail4">First name</label>
-      <input type="email" class="form-control" formControlName="first_name" id="inputEmail4" placeholder="First Name">
+      <input type="email" class="form-control" formControlName="first_name" placeholder="First Name" required>
     </div>
     <div class="form-group col-md-4">
       <label for="inputPassword4">Last Name</label>
-      <input type="type" formControlName="last_name" class="form-control" placeholder="Last Name">
+      <input type="text" formControlName="last_name" class="form-control" placeholder="Last Name" required>
     </div>
   </div>
   
   <div class="form-row">
     <div class="form-group col-md-4">
       <label for="inputCity">Location</label>
-      <input type="text" class="form-control" formControlName="location">
+      <input type="text" class="form-control" formControlName="location" required>
     </div>
     
     <div class="form-group col-md-2">
       <label for="inputZip">Gender</label>
-      <input type="text" class="form-control" formControlName="gender">
+      <input type="text" class="form-control" formControlName="gender" required>
     </div>
   </div>
   
   <button type="submit" class="btn btn-primary" (click)="updateName()">Submit</button>
 </form>
+<p style="color:crimson">{{error}}</p>

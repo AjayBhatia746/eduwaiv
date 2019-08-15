@@ -1,27 +1,157 @@
-<form [formGroup]="bdata" novalidate>
+<!-- <form [formGroup]="bdata" class="example-form" novalidate>
   <div class="form-row">
-    <div class="form-group col-md-4">
-      <label for="inputEmail4">First name</label>
-      <input type="email" class="form-control" formControlName="first_name" placeholder="First Name" required>
+    <div class="form-group col-md-2">
+      <mat-form-field class="example-full-width">
+        <input formControlName="first_name" matInput placeholder="First Name">
+      </mat-form-field>
     </div>
-    <div class="form-group col-md-4">
-      <label for="inputPassword4">Last Name</label>
-      <input type="text" formControlName="last_name" class="form-control" placeholder="Last Name" required>
+    <div class="form-group col-md-2">
+      <mat-form-field class="example-full-width">
+        <input formControlName="last_name" matInput placeholder="Last Name">
+      </mat-form-field>
     </div>
   </div>
   
-  <div class="form-row">
+    <div class="form-row"> 
     <div class="form-group col-md-4">
-      <label for="inputCity">Location</label>
-      <input type="text" class="form-control" formControlName="location" required>
+      <mat-form-field class="example-full-width" >
+        <input formControlName="last_name" matInput placeholder="Location">
+      </mat-form-field>
     </div>
     
     <div class="form-group col-md-2">
-      <label for="inputZip">Gender</label>
-      <input type="text" class="form-control" formControlName="gender" required>
+      <mat-select placeholder="Gender" formControlName="gender">
+        <mat-option value="option">Male</mat-option>
+        <mat-option value="option">Female</mat-option>
+        <mat-option value="option">Other</mat-option>
+      </mat-select>
     </div>
   </div>
   
   <button type="submit" class="btn btn-primary" (click)="updateName()">Submit</button>
 </form>
 <p style="color:crimson">{{error}}</p>
+
+
+<form class="example-form"> -->
+  <!-- <mat-form-field class="example-full-width">
+    <input matInput placeholder="Email" [formControl]="emailFormControl">
+    <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+      Enter valid email
+    </mat-error>
+    <mat-error *ngIf="emailFormControl.hasError('required')">
+      Email is <strong>required</strong>
+    </mat-error>
+  </mat-form-field> -->
+  <!-- <mat-form-field class="example-full-width">
+    <input formControlName="first_name" matInput placeholder="First Name">
+  </mat-form-field> -->
+  <!-- <div>
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Last Name">
+  </mat-form-field>
+</div> -->
+  <!-- <div>
+  <mat-form-field class="example-full-width" >
+    <input matInput placeholder="Location">
+  </mat-form-field>
+ </div> 
+  <mat-select placeholder="Gender">
+    <mat-option value="option">Male</mat-option>
+    <mat-option value="option">Female</mat-option>
+    <mat-option value="option">Other</mat-option>
+  </mat-select>
+
+
+  <div>
+  <mat-form-field>
+    <input matInput [matDatepicker]="picker" placeholder="Choose a date">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+</div>
+</form> -->
+
+
+
+<section class="testimonial py-5" id="testimonial">
+  <div class="container">
+      <div class="row ">
+          <div class="col-md-4 py-5 bg-primary text-white text-center ">
+              <div class=" ">
+                  <div class="card-body">
+                      <img src="http://www.ansonika.com/mavia/img/registration_bg.svg" style="width:30%">
+                      <h2 class="py-3">Registration</h2>
+                      <p>Eduwaive Foundation is an AI and data science company with the focus on using ML, Data Science, Artificial Intelligence, Cloud computing, Blockchain, IoT and other related technologies. </p>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-8 py-5 border">
+              <h4 class="pb-4">Please fill with your details</h4>
+              <form [formGroup]="bdata" class="example-form">
+                  <div class="form-row">
+                      <div class="form-group col-md-6 example-container">
+                        <mat-form-field>
+                          <input formControlName="first_name" matInput placeholder="First name">
+                        </mat-form-field>
+                      </div>
+                      <div class="form-group col-md-6 example-container">
+                        <mat-form-field>
+                          <input formControlName="last_name" matInput placeholder="Last name">
+                        </mat-form-field>
+                      </div>
+                    </div>
+                  <div class="form-row">
+                    <div class="form-group col-md-6 example-container">
+                      <mat-form-field class="example-full-width" >
+                        <input formControlName="location" matInput placeholder="Location">
+                      </mat-form-field>
+                    </div>
+                      <div class="form-group col-md-6">
+                        <mat-select placeholder="Gender" formControlName="gender">
+                          <mat-option value="option">Male</mat-option>
+                          <mat-option value="option">Female</mat-option>
+                          <mat-option value="option">Other</mat-option>
+                        </mat-select>   
+                                
+                      </div>
+                  </div>
+                      <div class="form-row">
+                        <div class="form-group col-md-6 example-container">
+                          <mat-form-field>
+                            <input matInput formControlName="clock" [matDatepicker]="picker" placeholder="Choose a date">
+                            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                            <mat-datepicker #picker></mat-datepicker>
+                          </mat-form-field>    
+                        </div>
+                        
+                        
+
+                      </div>
+
+
+                      
+                  
+                  <div class="form-row">
+                      <div class="form-group">
+                          <div class="form-group">
+                              <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
+                                <label class="form-check-label" for="invalidCheck2">
+                                  <small>By clicking Submit, you agree to our Terms & Conditions, Visitor Agreement and Privacy Policy.</small>
+                                </label>
+                              </div>
+                            </div>
+                  
+                        </div>
+                  </div>
+                  
+                  <div class="form-row">
+                    <button type="submit" class="btn btn-primary" (click)="updateName()">Submit</button>
+                  </div>
+              </form>
+          </div>
+      </div>
+  </div>
+</section>
+

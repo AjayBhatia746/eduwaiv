@@ -3,6 +3,7 @@ import { HeroService } from './../hero.service';
 import { FormGroup,FormControl, Validators } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-first',
   templateUrl: './first.component.html',
@@ -10,12 +11,18 @@ import { Router } from '@angular/router';
 })
 export class FirstComponent implements OnInit {
   bdata=new FormGroup({
-    first_name:new FormControl('',[Validators.required,Validators.minLength(5)]),
+    first_name:new FormControl('',[Validators.required,Validators.minLength(3)]),
     last_name:new FormControl('',[Validators.required]),
     location:new FormControl('',[Validators.required]),
-  gender:new FormControl('',[Validators.required])  
+  gender:new FormControl('',[Validators.required]),
+  clock:new FormControl('',[Validators.required])  
     });
-
+    emailFormControl = new FormControl('', [
+      Validators.required,
+      Validators.email,
+    ]);
+  
+    
 
     error=""
   constructor(private HeroService:HeroService,private router:Router,private httpClientservice:HttpClientService) {}

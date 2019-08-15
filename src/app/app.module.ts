@@ -15,7 +15,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import { ReactiveFormsModule } from '@angular/forms';
 import{HttpClientModule} from '@angular/common/http'
 
-
+import {MatInputModule,MatSelectModule,MatIconModule,MatDatepickerModule,MatNativeDateModule,MatRadioModule   } from '@angular/material'
 
 @NgModule({
   declarations: [
@@ -31,7 +31,13 @@ import{HttpClientModule} from '@angular/common/http'
     MatFormFieldModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatInputModule,
+    MatSelectModule,
+    MatIconModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatRadioModule   
   ],
   providers: [HeroService,HttpClientService],
   bootstrap: [AppComponent]

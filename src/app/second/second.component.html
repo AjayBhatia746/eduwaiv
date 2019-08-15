@@ -1,4 +1,4 @@
-<form [formGroup]="academic">
+<!-- <form [formGroup]="academic">
   <div class="form-row">
     <div class="form-group col-md-4">
       <label for="inputEmail4">Collage name</label>
@@ -19,4 +19,61 @@
   
   <button type="submit" (click)="updateName()" class="btn btn-primary">Submit</button>
 </form>
-<p style="color:crimson">{{error}}</p>
+<p style="color:crimson">{{error}}</p> -->
+
+
+
+
+
+<section class="testimonial py-5" id="testimonial">
+  <div class="container">
+      <div class="row ">
+          <div class="col-md-4 py-5 bg-primary text-white text-center ">
+              <div class=" ">
+                  <div class="card-body">
+                      <img src="http://www.ansonika.com/mavia/img/registration_bg.svg" style="width:30%">
+                      <h2 class="py-3">Registration</h2>
+                      <p>Eduwaive Foundation is an AI and data science company with the focus on using ML, Data Science, Artificial Intelligence, Cloud computing, Blockchain, IoT and other related technologies. </p>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-8 py-5 border">
+              <h4 class="pb-4">Please fill with your details</h4>
+              <form [formGroup]="academic">
+                  <div class="form-row">
+                      <div class="form-group col-md-12 example-container">
+                        <mat-form-field class="example-full-width">
+                          <input matInput placeholder="Collage/University Name" formControlName="clg_name"> 
+                        </mat-form-field>
+                      </div>
+                      
+                    </div>
+                  <div class="form-row">
+                    <div class="form-group col-md-12 example-container">
+                      <mat-form-field class="example-full-width" >
+                        <input formControlName="degree" matInput placeholder="Degree">
+                      </mat-form-field>
+                    </div>
+                     
+                  </div>
+                      <div class="form-row">
+                        <div class="form-group col-md-12 example-container">
+                          <mat-form-field class="example-full-width" >
+                            <input formControlName="from_year" matInput placeholder="Degree Duration">
+                          </mat-form-field>
+                        </div>
+                        
+                        
+
+                      </div>
+
+
+                  
+                  <div class="form-row">
+                    <button type="submit" (click)="updateName()" class="btn btn-primary">Submit</button>
+                  </div>
+              </form>
+          </div>
+      </div>
+  </div>
+</section>

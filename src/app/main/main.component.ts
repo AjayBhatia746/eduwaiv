@@ -11,7 +11,10 @@ import { FormControl,Validators ,FormGroup } from '@angular/forms';
 })
 export class MainComponent implements OnInit {
   info= new FormGroup({
-    email: new FormControl('',[Validators.required]),
+    email: new FormControl('', [
+      Validators.required,
+      Validators.email,
+    ]),
     contact_no: new FormControl('',[Validators.required]),
     git_link: new FormControl('',[Validators.required]),
     linkd_link:new FormControl('',[Validators.required])
